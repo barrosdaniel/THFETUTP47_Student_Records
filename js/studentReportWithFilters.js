@@ -1,7 +1,9 @@
 /*
-1. Prompt for student name or quit to exit;
-2. Prompt appears over and over again until quit is entered
-3. If matches a student's name, print student details to page
+1.DONE Prompt for student name or quit to exit;
+2.DONE Prompt appears over and over again until quit is entered
+3.DONE If matches a student's name, print student details to page and end loop
+4. Show message if search does not find a student with the name provided
+5. Add feature to allow for all records with the same name to be printed to the page
 */
 
 //DONE 2. Create function to print student records to page
@@ -14,6 +16,7 @@ function print(message) {
 
 do {
   var searchEnded = false;
+  var studentFound = false;
   var input = prompt('Search student records: type a name [Jody] to search or type "quit" to exit.').toLowerCase();
 
   for (var i = 0; i < students.length; i++) {
@@ -24,7 +27,11 @@ do {
       message += '<p>Achievements: ' + students[i].achievements + '</p>';
       print(message);
       input = 'quit';
+      studentFound = true;
     }
+  }
+  if (studentFound === false && input != 'quit' && input !== null) {
+    alert('No students found with this name.');
   }
 }
 while (input !== 'quit' || input === null);
