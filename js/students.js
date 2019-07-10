@@ -1,30 +1,30 @@
 //DONE 1. Create data sctructure to hold student records (name, track, achievements, points)
 var students = [{
-    name: 'Daniel Barros',
+    name: 'Daniel',
     track: 'Front-end',
     achievements: 66,
     points: 9687
   },
   {
-    name: 'Cristiano Ronaldo',
+    name: 'Ronaldo',
     track: 'Android',
     achievements: 21,
     points: 2569
   },
   {
-    name: 'Eric Cantona',
+    name: 'Cantona',
     track: 'UX',
     achievements: 32,
     points: 4587
   },
   {
-    name: 'Paul Pogba',
+    name: 'Pogba',
     track: 'UX',
     achievements: 41,
     points: 6214
   },
   {
-    name: 'Lionel Messi',
+    name: 'Messi',
     track: 'Full-stack',
     achievements: 87,
     points: 11256
