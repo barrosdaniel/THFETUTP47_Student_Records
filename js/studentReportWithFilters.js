@@ -14,17 +14,17 @@ function print(message) {
 
 do {
   var searchEnded = false;
-  var input = prompt('Search student records: type a name [Jody] to search or type "quit" to exit.');
+  var input = prompt('Search student records: type a name [Jody] to search or type "quit" to exit.').toLowerCase();
 
   for (var i = 0; i < students.length; i++) {
-    if (input === students[i].name) {
+    if (input === students[i].name.toLowerCase()) {
       message += '<h2>Student: ' + students[i].name + '</h2>';
       message += '<p>Track: ' + students[i].track + '</p>';
       message += '<p>Points: ' + students[i].points + '</p>';
       message += '<p>Achievements: ' + students[i].achievements + '</p>';
       print(message);
-      searchEnded = true;
+      input = 'quit';
     }
   }
 }
-while (input !== 'quit');
+while (input !== 'quit' || input === null);
