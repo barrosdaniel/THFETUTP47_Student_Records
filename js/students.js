@@ -1,4 +1,4 @@
-// name, track, achievements, points
+// 1. Create data sctructure to hold student records (name, track, achievements, points)
 var students = [{
     name: 'Daniel Barros',
     track: 'Front-end',
@@ -31,4 +31,15 @@ var students = [{
   }
 ];
 
-console.log(students);
+// console.log(students);
+
+// 2. Create function to print student records to page
+var message = '';
+var output = document.getElementById('output');
+for (var i = 0; i < students.length; i++) {
+  message += '<h2>Student: ' + students[i].name + '</h2>';
+  message += '<p>Track: ' + students[i].track + '</p>';
+  message += '<p>Points: ' + students[i].points + '</p>';
+  message += '<p>Achievements: ' + students[i].achievements + '</p>';
+}
+output.innerHTML = message;
